@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Hotéis em Pimenta Bueno - RO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --accent: #3498db;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .hotel-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hotel-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hotel-image {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hotel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .hotel-card:hover .hotel-image img {
+            transform: scale(1.05);
+        }
+        
+        .hotel-info {
+            padding: 1.5rem;
+        }
+        
+        .hotel-name {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hotel-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .hotel-location i {
+            margin-right: 0.5rem;
+        }
+        
+        .hotel-description {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .hotel-contact {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item i {
+            width: 25px;
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .map-btn {
+            background: var(--secondary);
+        }
+        
+        .map-btn:hover {
+            background: #c0392b;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hotel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Hospedagem em Pimenta Bueno</h1>
+            <p class="subtitle">Conforto e qualidade nos melhores hotéis da região</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hotel-grid">
+            <!-- Hotel Cristalina -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_CRISTALINA.jpg" alt="Hotel Cristalina">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Cristalina</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bairro dos Pioneiros</span>
+                    </div>
+                    <p class="hotel-description">Localizado atrás do Posto de combustíveis Pimenta Bueno, oferecendo conforto e comodidade para sua estadia.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-3056</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>(69) 9 9268-0971</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Rua Rolim de Moura, 42</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Cristalina+Palace+Hotel/@-11.676593,-61.1903467,17z/data=!4m9!3m8!1s0x93b7e42b41ce59cd:0x62279a8c1acd252d!5m2!4m1!1i2!8m2!3d-11.676593!4d-61.1877718!16s%2Fg%2F1tdnx_bj?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            <!-- Hotel Nacional -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_NACIONAL.jpg" alt="Hotel Nacional">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Nacional</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Centro</span>
+                    </div>
+                    <p class="hotel-description">Em frente a Prefeitura Municipal de Pimenta Bueno, localização privilegiada no coração da cidade.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-2077</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Rua Floriano Peixoto, 211</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Hotel+Nacional+-+Hotel+Pimenta+Bueno/@-11.6701994,-61.1915562,17z/data=!4m10!3m9!1s0x93b7e6804f7a8a29:0x1235897452713fe8!5m3!1s2025-02-18!4m1!1i2!8m2!3d-11.6702047!4d-61.1889813!16s%2Fg%2F1tj2pk4q?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            <!-- Piritiba Palace -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/PIRITIBA_PALACE.jpg" alt="Piritiba Palace">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Piritiba Palace</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Centro</span>
+                    </div>
+                    <p class="hotel-description">Próximo a Praça dos Pioneiros, oferecendo excelente infraestrutura para hóspedes exigentes.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-2131</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Av. Presidente Dutra, 1036</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Piritiba+Palace+Hotel+em+Pimenta+Bueno/@-11.6747498,-61.1885974,17z/data=!4m10!3m9!1s0x93b7e5b2a88dad5b:0x4ebdafbd898fc5cf!5m3!1s2025-02-18!4m1!1i2!8m2!3d-11.6747551!4d-61.1860225!16s%2Fg%2F1tcxw9y4?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            <!-- Hotel Kanaan -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_KANAAN.jpg" alt="Hotel Kanaan">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Kanaan</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bairro dos Pioneiros</span>
+                    </div>
+                    <p class="hotel-description">Localizado na saída para Cacoal, ideal para quem busca tranquilidade e fácil acesso às rodovias.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-2424</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Av. Marechal Rondon, 287</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Hotel+Kanaan/@-11.6747234,-61.1963222,15z/data=!4m17!1m5!2m4!1sHOTEL+KANAAN+em+Pimenta+Bueno!5m2!5m1!1s2025-02-18!3m10!1s0x93b7e68175434a65:0x220171859b47075e!5m3!1s2025-02-18!4m1!1i2!8m2!3d-11.6698065!4d-61.1913613!15sCh1IT1RFTCBLQU5BQU4gZW0gUGltZW50YSBCdWVub5IBBWhvdGVs4AEA!16s%2Fg%2F1hf3bg77g?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            <!-- Hotel Novo Lar -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_NOVO_LAR.jpg" alt="Hotel Novo Lar">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Novo Lar</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bairro dos Pioneiros</span>
+                    </div>
+                    <p class="hotel-description">Em frente ao Terminal Rodoviário, perfeito para quem chega ou parte de ônibus.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-2327</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Av. Cunha Bueno, 1013</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Hotel+Novo+Lar/@-11.6762718,-61.1926608,17z/data=!4m10!3m9!1s0x93b7e42b9f6cfd1b:0x87dc78fafd21f8d1!5m3!1s2025-02-18!4m1!1i2!8m2!3d-11.6762771!4d-61.1900859!16s%2Fg%2F11fjtb9v9r?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+            
+            <!-- Hotel Pimenta -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_PIMENTA.jpg" alt="Hotel Pimenta">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Pimenta</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>BR 364, KM 194 - Setor Industrial - Pimenta Bueno - RO
+                        </span>
+                    </div>
+                    <p class="hotel-description">Saída para Vilhena.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>069 9 9275-6666</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>BR 364, KM 194</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/%F0%9F%A5%87+Hotel+Pimenta+-+Hotel+em+Pimenta+Bueno/@-11.6973349,-61.1741696,186m/data=!3m1!1e3!4m17!1m5!2m4!1shotel+pimenta!5m2!5m1!1s2025-08-25!3m10!1s0x93b7e55c3d4b7d9d:0x892e32524b603114!5m3!1s2025-08-25!4m1!1i2!8m2!3d-11.6974613!4d-61.1735558!15sCg1ob3RlbCBwaW1lbnRhkgEFaG90ZWyqATYQATIfEAEiG7QBeYxr_Lpf3XScc0vmNXiXidn5PvC0iSo0WjIREAIiDWhvdGVsIHBpbWVudGHgAQA!16s%2Fg%2F11vwl76_vz?entry=ttu&g_ep=EgoyMDI1MDgxMC4wIKXMDSoASAFQAw%3D%3D" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+            
+
+            <!-- Hotel Umuarama -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/imagens/HOTEL_UMUARAMA.jpg" alt="Hotel Umuarama">
+                </div>
+                <div class="hotel-info">
+                    <h2 class="hotel-name">Hotel Umuarama</h2>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jardim das Oliveiras</span>
+                    </div>
+                    <p class="hotel-description">Na esquina do Terminal Rodoviário, oferecendo conveniência e conforto para viajantes.</p>
+                    <div class="hotel-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(69) 3451-3971</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Rua Prudente de Morães, 218</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Hotel+Umuarama/@-11.6773297,-61.1938577,17z/data=!3m1!4b1!4m6!3m5!1s0x93b7e42f205fed71:0xf18bf35242019965!8m2!3d-11.677335!4d-61.1912828!16s%2Fg%2F11gfdd4n2_?entry=ttu" class="btn map-btn" target="_blank">Ver no Mapa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Hospedagem Pimenta Bueno - Todos os direitos reservados</p>
+            <p>Informações coletadas do Google Maps</p>
+        </div>
+    </footer>
+</body>
+</html>
